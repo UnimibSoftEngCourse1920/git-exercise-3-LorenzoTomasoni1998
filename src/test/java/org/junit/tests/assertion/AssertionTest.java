@@ -16,6 +16,7 @@ import static org.junit.Assert.fail;
 import java.math.BigDecimal;
 
 import org.junit.Assert;
+import org.junit.Compare;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
@@ -256,6 +257,14 @@ public class AssertionTest {
         assertEquals(1l, 1l);
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
+    }
+    @Test
+    public void assertGreaterThanInt()
+    {
+        int i1=0;
+        int i2=0;
+        Compare comparator=new Compare();
+        assertEquals(Assert.assertGreaterThanInt(i1, i2, comparator), -1);
     }
 
     @Test(expected = AssertionError.class)
