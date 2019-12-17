@@ -1036,4 +1036,8 @@ public class Assert {
         return comparator.compare(o1, o2);
     }
 
+    public static <T> int assertGreaterThanInt(int i1,int i2, Compare comparator)
+    {
+        return comparator.compareInt(i1, i2);
+    }
 }

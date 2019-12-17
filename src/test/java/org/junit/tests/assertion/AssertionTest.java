@@ -419,6 +419,14 @@ public class AssertionTest {
         Compare comparator=new Compare();
         assertEquals(Assert.assertGreaterThan(o1, o2, comparator), -1);
     }
+    public void assertGreaterThanInt()
+    {
+        int i1=0;
+        int i2=0;
+        Compare comparator=new Compare();
+        assertEquals(Assert.assertGreaterThanInt(i1, i2, comparator), -1);
+    }
+
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);

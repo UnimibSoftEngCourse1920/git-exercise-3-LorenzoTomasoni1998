@@ -9,5 +9,17 @@ public class Compare<T> implements java.util.Comparator<T>
         else
             return -1;
     }
+<<<<<<< HEAD
+=======
+    public int compareInt(int i1, int i2)
+    {
+        if(i1==i2)
+            return 0;
+        if(i1>i2)
+            return 1;
+        else 
+            return 0;
+    }
+>>>>>>> refs/heads/greater-primitives
     
 }
