@@ -16,10 +16,11 @@ import static org.junit.Assert.fail;
 import java.math.BigDecimal;
 
 import org.junit.Assert;
+import org.junit.Compare;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
-
+import org.junit.Assert;
 /**
  * Tests for {@link org.junit.Assert}
  */
@@ -257,7 +258,14 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
-
+    @Test
+    public void assertGreaterThan()
+    {
+        Object o1=new Object();
+        Object o2=new Object();
+        Compare comparator=new Compare();
+        assertEquals(Assert.assertGreaterThan(o1, o2, comparator), -1);
+    }
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);
